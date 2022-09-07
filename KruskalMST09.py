@@ -1,5 +1,7 @@
 #https://www.youtube.com/watch?v=xDrLSOxaFrA
 
+#disjoint set union(DSU)
+
 def find(parent,i):
     if parent[i]==i:
         return i
@@ -24,7 +26,7 @@ def kruskals(g_nodes, g_from, g_to, g_weight):
             parent = union(parent,xr,yr)
         i+=1
     return res
-g_nodes, g_edges = map(int, input().rstrip().split())
+g_nodes, g_edges = map(int, input().rstrip().split()) # scan numbers of nodes and edges
 g_from = [0] * g_edges
 g_to = [0] * g_edges
 g_weight = [0] * g_edges

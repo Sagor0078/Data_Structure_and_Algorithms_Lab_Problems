@@ -1,3 +1,4 @@
+#https://www.youtube.com/watch?v=xDrLSOxaFrA
 
 def find(parent,i):
     if parent[i]==i:

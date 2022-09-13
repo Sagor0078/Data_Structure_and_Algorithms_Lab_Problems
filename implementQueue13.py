@@ -1,28 +1,21 @@
 
-#https://www.geeksforgeeks.org/queue-in-python/
-# Python program to
-# demonstrate queue implementation
-# using list
+from queue import Queue
 
-# Initializing a queue
-queue = []
-# Adding elements to the queue
-queue.append('1')
-queue.append('2')
-queue.append('3')
+q = Queue(maxsize = 3)
 
-print("Initial queue")
-print(queue)
+print(q.qsize())
 
-# Removing elements from the queue
-print("\nElements dequeued from queue")
-print(queue.pop(0))
-print(queue.pop(0))
-print(queue.pop(0))
+q.put('a')
+q.put('b')
+q.put('c')
+print("\nFull: ", q.full())
 
-print("\nQueue after removing elements")
-print(queue)
+print("\nElements dequeued from the queue")
+print(q.get())
+print(q.get())
+print(q.get())
+print("\nEmpty: ", q.empty())
 
-# Uncommenting print(queue.pop(0))
-# will raise and IndexError
-# as the queue is now empty
+q.put(1)
+print("\nEmpty: ", q.empty())
+print("Full: ", q.full())
